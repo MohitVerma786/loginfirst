@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6 mt-5">
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="pass1" class="form-label">Old Password</label>
+              <input type="password" class="form-control" id="pass1" name="oldpassword" [(ngModel)]="chpass.oldpassword">
+            </div>
+            <div class="mb-3">
+              <label for="pass2" class="form-label">New Password</label>
+              <input type="password" class="form-control" id="pass2" name="newpassword" [(ngModel)]="chpass.newpassword">
+            </div>
+            <div class="mb-3">
+                <label for="pass3" class="form-label">Confirm New Password</label>
+                <input type="password" class="form-control" id="pass3" name="confirmpass" [(ngModel)]="confirmpass">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

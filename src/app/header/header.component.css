@@ -1,0 +1,11 @@
+.btn-dark:focus {
+    color: #fff;
+    background-color: #212529!important;
+    border-color: #212529!important;
+    box-shadow: none;
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: #212529!important;
+    border-color: #212529!important;
+}

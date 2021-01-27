@@ -1,0 +1,29 @@
+<div class="sidenav">
+  <div class="login-main-text">
+     <h2>Application<br> Login Page</h2>
+     <p>Login here to access.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+     <div class="login-form">
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="loginemail" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="loginemail" name="email" [(ngModel)]="loginvalue.email">
+        </div>
+        <div class="mb-3">
+          <label for="loginpass" class="form-label">Password</label>
+          <input type="password" class="form-control" id="loginpass" name="pass" [(ngModel)]="loginvalue.password">
+        </div>
+        <button *ngIf="issubmitting" type="submit" class="btn btn-primary">Submit</button>
+        <div *ngIf="islogging">
+          <button class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Logging In...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
